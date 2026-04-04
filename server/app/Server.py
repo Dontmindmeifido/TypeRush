@@ -37,7 +37,7 @@ app.add_middleware(
 )
 
 @app.post("/api/scores/statistics")
-def save_score(payload: dict):
+def get_score(payload: dict):
     local_cursor = conn.cursor()
 
     local_cursor.execute(f"""
@@ -57,7 +57,7 @@ def save_score(payload: dict):
     return {"status": "Success", "message": "Saved Scores to DB!"}
 
 @app.post("/api/users/login")
-def save_score(payload: dict):
+def login_user(payload: dict):
     username = payload["username"]
     target = payload["password"]
 
@@ -73,7 +73,7 @@ def save_score(payload: dict):
     return {"status": "Failure", "message": "failure"}
 
 @app.post("/api/users/register")
-def save_score(payload: dict):
+def register_user(payload: dict):
     cursor.execute("""
         INSERT INTO users(username, password)
         VALUES (?, ?)
