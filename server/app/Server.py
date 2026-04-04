@@ -40,7 +40,7 @@ app.add_middleware(
 def get_score(payload: dict):
     local_cursor = conn.cursor()
 
-    local_cursor.execute(f"""
+    local_cursor.execute("""
         SELECT * FROM scores WHERE username = ?
     """, (payload["username"],))
     
