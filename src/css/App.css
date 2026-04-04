@@ -1,0 +1,308 @@
+.pending {
+  position: relative;
+  color:rgb(70, 70, 67);
+}
+
+.correct {
+  position: relative;
+  color:rgb(31, 180, 15);
+}
+
+.incorrect {
+  position: relative;
+  color:rgb(177, 23, 23);
+}
+
+.indexCursor {
+  position: absolute;
+  left: -50%;
+  color: white;
+}
+
+.blink {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 100%;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+.appLayout {
+  display: grid;
+
+  grid-template-rows: 128px 128px 256px;
+}
+
+.appLayoutAuth {
+  display: grid;
+
+  grid-template-rows: 256px 128px 128px;
+}
+
+.appLayoutStatistics {
+  display: grid;
+
+  grid-template-rows: 128px 128px 1fr;
+}
+
+#navbar {
+  margin-top: 16px;
+  display: grid;
+
+  grid-template-columns: 5fr 1fr;
+}
+
+#navbar > .pageTitle {
+  color: white;
+  font-size: 27px;
+  margin-left: 16px;
+  margin-top: 0px;
+
+  font-family: monospace;
+}
+
+#navbar .item {
+  color: white;
+  font-size: 25px;
+
+  font-family: monospace;
+
+  margin-right: 16px;
+}
+
+#navbar > .restContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.typingContainer {
+  height: 50vh;
+  width: 70vw;
+  margin: 0 auto;
+
+  background-color: rgba(71, 93, 112, 0);
+
+  font-size: 25px;
+  word-spacing: 10px;
+
+  grid-row-start: 3;
+}
+
+.parametersContainer {
+  display: flex;
+  margin: 0 auto;
+
+  width: 600px;
+}
+
+.parameters {
+  color: white;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgba(45, 43, 41, 0.273);
+  padding: 8px 8px;
+  height: 32px;
+
+  font-size: 17px;
+
+  border-radius: 10%;
+}
+
+.parameters > p {
+  background-color: rgba(45, 43, 41, 0.623);
+  padding: 8px 8px;
+  border-radius: 10%;
+
+  margin-left: 8px;
+}
+
+.selected {
+  color: white;
+}
+
+.deselected {
+  color: rgba(255, 255, 255, 0.447);
+}
+
+.loading {
+  display: block;
+  margin: auto auto;
+  color: white;
+}
+
+/* AUTHENTIFIER */
+.authContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-top: 0px;
+  padding: 16px;
+
+  font-size: 17px;
+
+  width:fit-content;
+  height: fit-content;
+
+  background-color: rgba(45, 43, 41, 0.273);
+
+  border-radius: 5%;
+
+  color: white;
+
+  text-align: center;
+}
+
+.authContainer span {
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+.loginContainer span {
+  display: inline-block;
+  margin-bottom: 16px;
+  margin-right: 8px;
+}
+
+.authContainer input {
+  background-color: rgba(45, 43, 41, 0.623);
+  border: solid 1px rgba(0, 0, 0, 0);
+  height: 17px;
+}
+
+.authContainer button {
+  background-color: rgba(45, 43, 41, 0.623);
+  color: white;
+  border: solid 1px rgba(29, 29, 29, 0);
+  font-size: 17px;
+}
+
+.switchAuth {
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+  background-color: rgba(85, 85, 85, 0);
+  color:rgba(255, 255, 255, 0.414);
+  border: none;
+  width: 200px;
+  font-size: 15px;
+}
+
+.statisticsContainer {
+  width: 550px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+
+  font-size: 17px;
+
+  padding: 8px;
+}
+
+.statisticsContainer .statisticsList {
+  background-color: rgba(45, 43, 41, 0.273);
+  border-radius: 5%;
+
+  height: fit-content;
+  overflow: hidden;
+}
+
+.statisticsContainer .userData {
+  background-color: rgba(45, 43, 41, 0.623);
+
+  width: 60%;
+  height: fit-content;
+  width: fit-content;
+
+  padding: 8px;
+
+  border-radius: 20%;
+}
+
+.statisticsContainer .statisticsItemWrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.statisticsContainer .statisticsItem {
+  background-color: rgba(45, 43, 41, 0.623);
+  padding: 8px;
+
+  border-radius: 20%;
+}
+
+.statisticsContainer .colHeader {
+  background-color: rgba(45, 43, 41, 0.623);
+  height: 19px;
+  width: 140px;
+  text-align: center;
+  padding: 8px;
+}
+
+.statisticsHeader {
+  text-align: center;
+  font-size: 23px;
+
+  font-family: monospace;
+}
+
+.endGameContainer {
+  background-color: rgba(45, 43, 41, 0.273);
+
+  border-radius: 10%;
+  text-align: center;
+  font-size: 23px;
+
+  padding: 16px;
+
+  width: fit-content;
+  
+
+  margin: 0 auto;
+}
+
+.endGameItem {
+  display: inline-block;
+  background-color: rgba(45, 43, 41, 0.623);
+  width: fit-content;
+  height: fit-content;
+
+  padding: 8px;
+
+  margin-bottom: 8px;
+
+  border-radius: 20%;
+}
+
+.actionHint {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 16px;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.414);
+}
+
+.key {
+  display: inline-block;
+  background-color: rgba(45, 43, 41, 0.623);
+  padding: 8px;
+  border-radius: 10%;
+}
+
+.hintContainer {
+  grid-row-start: 4;
+  margin: 0 auto;
+}
