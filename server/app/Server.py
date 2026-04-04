@@ -3,7 +3,7 @@ import uvicorn
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-conn = sqlite3.connect("typerush_raw.db", check_same_thread=False)
+conn = sqlite3.connect("../typerush_raw.db", check_same_thread=False)
 cursor = conn.cursor()
 
 cursor.execute("""
@@ -30,7 +30,7 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://localhost:3000"],
+    allow_origins=["http://localhost:5174"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
